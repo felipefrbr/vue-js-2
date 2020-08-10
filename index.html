@@ -1,0 +1,28 @@
+<html>
+
+    <script src="https://cdn.jsdelivr.net/npm/vue"></script>
+
+    <body>
+        <div id="app">
+            <input type="text" v-on:input="changeName" />
+            <h1> {{ message }} </h1>    
+        </div>
+        
+    </body>
+
+    <script>
+
+        var app = new Vue({
+            el: '#app',
+            data: {
+                message: 'Hello World!'
+            },
+            methods: {
+                changeName: function(event){
+                    this.message = event.target.value;
+                }
+            }
+        })
+
+    </script>
+</html>
