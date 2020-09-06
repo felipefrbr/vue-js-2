@@ -39,11 +39,13 @@
             <button id="give-up" @click="giveUp()">GIVE UP</button>
         </div>
     </section>
-    <section class="row log">
+    <section class="row log" v-if="actions.length > 0">
         <div class="small-12 columns">
             <ul>
-                <li v-for="act in actions">
-                    {{ act }}
+                <li v-for="act in actions" 
+                    :class="{'player-turn': act.turn == 'player', 'monster-turn': act.turn == 'monster'}"
+                >
+                    {{ act.description }}
                 </li>
             </ul>
         </div>
