@@ -1,19 +1,10 @@
 import Vue from 'vue'
+import App from './App.vue'
+import MyComponent from './my-component.vue'
 
-Vue.component('my-component', {
-  data: function(){
-    return {
-      status: 'Critical'
-    }
-  },
-  template: '<div>Status: {{ status }} | <button @click="changeStatus()" >change</button> </div>',
-  methods: {
-    changeStatus: function(){
-      this.status = this.status === 'Normal' ? 'Critical' : 'Normal'
-    }
-  }
-});
+Vue.component('my-component', MyComponent);
 
 new Vue({
-  el: '#app'
+  el: '#app',
+  render: h => h(App)
 })
