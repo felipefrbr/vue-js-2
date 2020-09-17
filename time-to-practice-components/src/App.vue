@@ -9,9 +9,9 @@
 </template>
 
 <script>
-    import AppHeader from './Header.vue'
-    import AppFooter from './Footer.vue'
-    import AppServers from './Servers.vue'
+    import AppHeader from './components/shared/Header.vue'
+    import AppFooter from './components/shared/Footer.vue'
+    import AppServers from './components/server/Servers.vue'
 
     export default{
         components: {
